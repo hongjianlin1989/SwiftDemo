@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Alamofire
 class MovieFilmsCell: UITableViewCell {
-
+    
     @IBOutlet var postView: UIView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
@@ -21,7 +21,7 @@ class MovieFilmsCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func buildCell(movieData : Movie)  {
         self.purchaseButton.layer.cornerRadius = 5
         self.purchaseButton.tag = movieData.movieId!.intValue
@@ -52,7 +52,7 @@ class MovieFilmsCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet var tableView: UITableView!
     let reuseIdentifier = "MovieFilmsCell"
     let movieService = MovieService.init() as MovieService
@@ -30,20 +30,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             self.fetchDetailListOfMoive()
         }
     }
-
+    
     func fetchDetailListOfMoive() {
         var movieListId = [String]()
         for case let item in self.movieArray {
             movieListId.append((item.movieId?.stringValue)!)
         }
-        
         let movieRequest = MovieRequest.init(movieIds: movieListId as NSArray)
         self.movieService.getDetailListOfMovieWithRequest(req: movieRequest) { (Array) in
             self.movieArray = Array
             self.tableView.reloadData()
         }
     }
-
+    
     func fetchListOfMoive() {
         let movieRequest = MovieRequest.init()
         self.movieService.getListOfMovieWithRequest(req: movieRequest) { (Array) in
@@ -51,28 +50,26 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             self.tableView.reloadData()
         }
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "detail") {
             let detailVC = segue.destination as! DetailViewController
             detailVC.moveData = self.movieArray[selectedIndex]
         }
-       
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     func purchasePressed(sender: UIButton!) {
         self.performSegue(withIdentifier: "purchase", sender: nil)
     }
     
     
-// MARK: UItableView DataSource and delegate
+    // MARK: UItableView DataSource and delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -83,10 +80,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     {
         return self.movieArray.count
     }
-
+    
     
     func tableView(_ tableView: UITableView,
-                            heightForRowAt indexPath: IndexPath) -> CGFloat
+                   heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return 150;
     }
@@ -101,26 +98,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-
         let m = self.movieArray[indexPath.row]
-        
         if let c = cell as? MovieFilmsCell{
             c.buildCell(movieData: m)
             c.purchaseButton.addTarget(self, action: #selector(purchasePressed), for: .touchUpInside)
-          
         }
-        
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "detail", sender: nil)
-        
     }
     
-
+    
 }
 

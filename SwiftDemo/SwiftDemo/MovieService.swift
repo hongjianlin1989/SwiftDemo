@@ -51,15 +51,12 @@ class MovieService: NSObject {
         
         Alamofire.request(strURL , parameters: req.rankParameters as? Dictionary).responseJSON { response in
             debugPrint(response)
-            
             if response.error != nil
             {
                 debugPrint(response.error.debugDescription)
                 completion([])
             }
-            
             if let JSON = response.result.value as? NSArray{
-                
                 var movieArray : Array<Movie> = Array.init()
                 for case let item as NSDictionary in JSON {
                     let m = Movie.init(objDictionary: item)
@@ -80,13 +77,11 @@ class MovieService: NSObject {
         
         Alamofire.request(strURL).responseJSON { response in
             debugPrint(response)
-            
             if response.error != nil
             {
                 debugPrint(response.error.debugDescription)
                 completion([])
             }
-            
             if let JSON = response.result.value as? NSArray{
                 var movieArray : Array<Movie> = Array.init()
                 for case let item as NSDictionary in JSON {
@@ -95,7 +90,6 @@ class MovieService: NSObject {
                 }
                 completion(movieArray)
             }
-            
         }
         
     }

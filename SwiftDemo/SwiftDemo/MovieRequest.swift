@@ -29,7 +29,6 @@ class MovieRequest: NSObject {
         self.startRankIndex = startRankIndex
     }
     
-   
     public var defaultParameters: Dictionary<String, Any> {
         let Dict = ["authToken" : authToken]
         return Dict
@@ -39,7 +38,6 @@ class MovieRequest: NSObject {
         let Dict = ["authToken": authToken, "numMovies": numMovies! as NSNumber, "startRankIndex": startRankIndex! as NSNumber] as NSDictionary
         return Dict
     }
-    
     
     public var DetailUrl: String? {
         var url = "?authToken=" + authToken
