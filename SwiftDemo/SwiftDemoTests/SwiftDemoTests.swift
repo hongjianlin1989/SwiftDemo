@@ -28,7 +28,7 @@ class SwiftDemoTests: XCTestCase {
         let movieListId = ["521", "486"]
         let movieRequest = MovieRequest.init(movieIds: movieListId as NSArray)
         self.movieService.getDetailListOfMovieWithRequest(req: movieRequest) { (Arr) in
-            XCTAssertNotNil(Arr , "The result is nil")
+             XCTAssertTrue(Arr.count != 0, "The result is empty")
             completionExpectation.fulfill()
         }
         self.waitForExpectations(timeout: 10, handler: nil)
@@ -38,7 +38,7 @@ class SwiftDemoTests: XCTestCase {
         let completionExpectation = self.expectation(description: "No success returned")
         let movieRequest = MovieRequest.init(startRankIndex: 5, numMovies: 5)
         self.movieService.getRankListOfMovieWithRequest(req: movieRequest) { (Arr) in
-            XCTAssertNotNil(Arr , "The result is nil")
+            XCTAssertTrue(Arr.count != 0, "The result is empty")
             completionExpectation.fulfill()
         }
         self.waitForExpectations(timeout: 10, handler: nil)
