@@ -16,29 +16,30 @@ class Movie: NSObject {
         dic = objDictionary
     }
     
-    public var movieId: String? {
-        return self.dic?["movieId"] as! String?
+    public var movieId: NSNumber? {
+    
+        return self.dic?["Id"] as? NSNumber
     }
     
     public var rank: String? {
-        return self.dic?["rank"] as! String?
+        return self.dic?["Rank"] as! String?
     }
     
     public var name: String? {
-        return self.dic?["name"] as! String?
+        return self.dic?["Name"] as! String?
     }
     
    
     public var duration: String? {
-        return self.dic?["duration"] as! String?
+        return self.dic?["Duration"] as! String?
     }
     
     public var movieDescription: String? {
-        return self.dic?["movieDescription"] as! String?
+        return self.dic?["Description"] as! String?
     }
    
     public var director: String? {
-        return self.dic?["director"] as! String?
+        return self.dic?["Director"] as! String?
     }
    
     public var Actors: NSArray? {

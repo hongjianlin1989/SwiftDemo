@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
-    let reuseIdentifier = "MovieCell"
+    let reuseIdentifier = "MovieFilmsCell"
     let movieService = MovieService.init() as MovieService
     var movieArray : Array<Movie> = Array.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        self.tableView.register(UINib(nibName: "MovieFilmsCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         self.fetchListOfMoive()
     }
     
@@ -68,7 +68,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
 
         let m = self.movieArray[indexPath.row]
         
-        if let c = cell as? MovieCell {
+        if let c = cell as? MovieFilmsCell{
             
             c.buildCell(movieData: m)
         }
