@@ -12,14 +12,11 @@ import Alamofire
 class DetailViewController: UIViewController {
     
     var moveData : Movie?
-    
     @IBOutlet var posterImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var directorLabel: UILabel!
     @IBOutlet var actorField: UITextView!
     @IBOutlet var descriptionField: UITextView!
-    
-    
     
     @IBAction func BackButtonClick(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)

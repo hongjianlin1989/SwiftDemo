@@ -35,10 +35,8 @@ class MovieFilmsCell: UITableViewCell {
         posterImage = UIImageView.init(frame: self.postView.bounds)
         let urlString="http://placehold.it/130?text=" + movieData.movieId!.stringValue
         
-            
         Alamofire.request(urlString).responseImage { response in
             debugPrint(response)
-            
             debugPrint(response.result)
             
             if let image = response.result.value {

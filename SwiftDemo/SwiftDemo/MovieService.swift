@@ -29,20 +29,12 @@ class MovieService: NSObject {
                 
             var movieArray : Array<Movie> = Array.init()
             for case let item as NSDictionary in JSON {
-                
                 let m = Movie.init(objDictionary: item)
                 movieArray.append(m)
-                
-                
             }
-                
              completion(movieArray)
-                
             }
-            
-           
-            
-            
+
         }
 
     }

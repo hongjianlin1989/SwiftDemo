@@ -29,7 +29,6 @@ class Movie: NSObject {
         return self.dic?["Name"] as! String?
     }
     
-   
     public var duration: String? {
         return self.dic?["Duration"] as! String?
     }

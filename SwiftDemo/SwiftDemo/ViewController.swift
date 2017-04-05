@@ -16,8 +16,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     var movieArray : Array<Movie> = Array.init()
     var selectedIndex = -1
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MovieFilmsCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
@@ -35,11 +33,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "detail") {
-            
             let detailVC = segue.destination as! DetailViewController
             detailVC.moveData = self.movieArray[selectedIndex]
-            
-          
         }
        
         
@@ -56,7 +51,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     
-    // MARK: UItableViewDataSource and delegate
+// MARK: UItableView DataSource and delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

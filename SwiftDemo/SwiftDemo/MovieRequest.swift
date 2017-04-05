@@ -17,7 +17,6 @@ class MovieRequest: NSObject {
     let authToken = "3b502b3f-b1ff-4128-bd99-626e74836d9c"
 
     override init() {
-        
     }
     
     init(movieIds:NSArray) {
