@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/ViewController.swift"
-            timestampString = "513101015.811561"
+            timestampString = "513101681.477739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "tableView(_:estimatedHeightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/ViewController.swift"
-            timestampString = "513101015.811561"
+            timestampString = "513101681.477739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:heightForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/ViewController.swift"
-            timestampString = "513101015.811561"
+            timestampString = "513101681.477739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/ViewController.swift"
-            timestampString = "513101015.811561"
+            timestampString = "513101681.477739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "fetchListOfMoive()"
             landmarkType = "7">
          </BreakpointContent>
@@ -161,6 +161,69 @@
             endingLineNumber = "50"
             landmarkName = "getRankListOfMovieWithRequest(req:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemoTests/SwiftDemoTests.swift"
+            timestampString = "513102003.694628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "testRankApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDemoTests.SwiftDemoTests.(testRankApi () -&gt; ()).(closure #1)"
+                  moduleName = "SwiftDemoTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hongjianlin/Desktop/SwiftDemo/SwiftDemo/SwiftDemoTests/SwiftDemoTests.swift"
+                  timestampString = "513102020.816033"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDemoTests.SwiftDemoTests.(testRankApi () -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "SwiftDemoTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hongjianlin/Desktop/SwiftDemo/SwiftDemo/SwiftDemoTests/SwiftDemoTests.swift"
+                  timestampString = "513102020.818759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDemoTests.SwiftDemoTests.(testRankApi () -&gt; ()).(closure #1).(implicit closure #2)"
+                  moduleName = "SwiftDemoTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hongjianlin/Desktop/SwiftDemo/SwiftDemo/SwiftDemoTests/SwiftDemoTests.swift"
+                  timestampString = "513102020.821272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
