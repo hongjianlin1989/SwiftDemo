@@ -36,6 +36,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
 
     
+    func purchasePressed(sender: UIButton!) {
+        self.performSegue(withIdentifier: "purchase", sender: nil)
+    }
+    
+    
     // MARK: UItableViewDataSource and delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,9 +74,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         let m = self.movieArray[indexPath.row]
         
         if let c = cell as? MovieFilmsCell{
-            
             c.buildCell(movieData: m)
+            c.purchaseButton.addTarget(self, action: #selector(purchasePressed), for: .touchUpInside)
+          
         }
+        
+        
         
         return cell
     }

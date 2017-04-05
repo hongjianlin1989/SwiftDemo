@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewr-uc-hvw" id="8nW-ne-hqp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -67,10 +69,60 @@
                     <navigationItem key="navigationItem" id="OQq-G9-CQc"/>
                     <connections>
                         <outlet property="tableView" destination="uIZ-XT-Z99" id="bdP-9L-Pyk"/>
+                        <segue destination="7gl-zO-jHy" kind="show" identifier="purchase" id="3FF-ch-iEs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Purchase View Controller-->
+        <scene sceneID="Lyu-w4-sev">
+            <objects>
+                <viewController id="7gl-zO-jHy" customClass="PurchaseViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cdh-M1-ZAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="UCw-Q2-oIv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YgF-MN-lq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="751-2v-qem">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-Qp-1Uu">
+                                <rect key="frame" x="268" y="7" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r0k-Qp-1Uu" secondAttribute="height" multiplier="1:1" id="dGs-L4-tah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backClick:" destination="7gl-zO-jHy" eventType="touchUpInside" id="7jS-Ch-XVF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="751-2v-qem" firstAttribute="leading" secondItem="YgF-MN-lq6" secondAttribute="leading" id="K1D-dL-QcZ"/>
+                            <constraint firstItem="751-2v-qem" firstAttribute="top" secondItem="YgF-MN-lq6" secondAttribute="top" id="Ph5-ZQ-2Fg"/>
+                            <constraint firstItem="r0k-Qp-1Uu" firstAttribute="width" secondItem="YgF-MN-lq6" secondAttribute="height" multiplier="45:568" id="Q9Y-Ax-WfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="751-2v-qem" secondAttribute="trailing" id="QTJ-Ib-KvH"/>
+                            <constraint firstItem="UCw-Q2-oIv" firstAttribute="top" secondItem="751-2v-qem" secondAttribute="bottom" id="R1A-wd-b4v"/>
+                            <constraint firstItem="r0k-Qp-1Uu" firstAttribute="centerX" secondItem="YgF-MN-lq6" secondAttribute="centerX" multiplier="1.81" id="W0B-29-U6J"/>
+                            <constraint firstItem="r0k-Qp-1Uu" firstAttribute="centerY" secondItem="YgF-MN-lq6" secondAttribute="centerY" multiplier="0.105" id="mWT-R1-Y55"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="751-2v-qem" id="04f-cJ-N3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgQ-hu-5ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="124"/>
         </scene>
     </scenes>
 </document>
