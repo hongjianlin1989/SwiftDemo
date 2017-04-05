@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemoTests/SwiftDemoTests.swift"
-            timestampString = "513102003.694628"
+            timestampString = "513104927.500381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "testRankApi()"
             landmarkType = "7">
             <Locations>

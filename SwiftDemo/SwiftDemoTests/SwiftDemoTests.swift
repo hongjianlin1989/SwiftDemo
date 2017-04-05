@@ -23,7 +23,16 @@ class SwiftDemoTests: XCTestCase {
         super.tearDown()
     }
     
-    
+    func testDetailAPI()  {
+        let completionExpectation = self.expectation(description: "No success returned")
+        let movieListId = ["521", "486"]
+        let movieRequest = MovieRequest.init(movieIds: movieListId as NSArray)
+        self.movieService.getDetailListOfMovieWithRequest(req: movieRequest) { (Arr) in
+            XCTAssertNotNil(Arr , "The result is nil")
+            completionExpectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 10, handler: nil)
+    }
     
     func testRankApi() {
         let completionExpectation = self.expectation(description: "No success returned")
