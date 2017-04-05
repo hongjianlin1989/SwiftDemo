@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import Alamofire
 class MovieFilmsCell: UITableViewCell {
 
     @IBOutlet var postView: UIView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var purchaseButton: UIButton!
+    var posterImage: UIImageView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,13 @@ class MovieFilmsCell: UITableViewCell {
         self.nameLabel.text = movieData.name
         self.nameLabel.sizeToFit()
         self.durationLabel.text = "Duration:" + movieData.duration!
+        
+        posterImage = UIImageView.init(frame: self.postView.bounds)
+        let urlString="http://placehold.it/130?text=" + movieData.movieId!.stringValue
+        
+            
+        
+        
         
     }
     
