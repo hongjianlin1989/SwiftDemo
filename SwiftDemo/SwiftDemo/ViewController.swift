@@ -14,6 +14,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     let reuseIdentifier = "MovieFilmsCell"
     let movieService = MovieService.init() as MovieService
     var movieArray : Array<Movie> = Array.init()
+    var selectedIndex = -1
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,18 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detail") {
+            
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.moveData = self.movieArray[selectedIndex]
+            
+          
+        }
+       
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,10 +94,17 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
           
         }
         
-        
-        
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedIndex = indexPath.row
+        self.performSegue(withIdentifier: "detail", sender: nil)
+        
+    }
+    
 
 }
 

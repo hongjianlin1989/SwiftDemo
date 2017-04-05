@@ -9,11 +9,10 @@
 import UIKit
 
 class PurchaseViewController: UIViewController {
+    
     @IBAction func backClick(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
-
-    
     @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {

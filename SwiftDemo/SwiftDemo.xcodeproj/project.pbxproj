@@ -10,6 +10,7 @@
 		0E6D985DD181E18821C47FA3 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B1AA9D8F88D97E45BADF08 /* Pods_SwiftDemo.framework */; };
 		1FCA608EC541CBCC8027DC85 /* Pods_SwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8068F6DCB96BA08184500FF /* Pods_SwiftDemoUITests.framework */; };
 		27894CE21E9532A9008A963A /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27894CE11E9532A9008A963A /* PurchaseViewController.swift */; };
+		27894CE41E9538F3008A963A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27894CE31E9538F3008A963A /* DetailViewController.swift */; };
 		27955E6C1E93ECA500680389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E6B1E93ECA500680389 /* AppDelegate.swift */; };
 		27955E6E1E93ECA500680389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E6D1E93ECA500680389 /* ViewController.swift */; };
 		27955E711E93ECA500680389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27955E6F1E93ECA500680389 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		01B1AA9D8F88D97E45BADF08 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27894CE11E9532A9008A963A /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		27894CE31E9538F3008A963A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		27955E681E93ECA500680389 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27955E6B1E93ECA500680389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27955E6D1E93ECA500680389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				27955E9D1E941A9600680389 /* Networking */,
 				27955E6D1E93ECA500680389 /* ViewController.swift */,
 				27894CE11E9532A9008A963A /* PurchaseViewController.swift */,
+				27894CE31E9538F3008A963A /* DetailViewController.swift */,
 				27955EA81E94823200680389 /* MovieFilmsCell.swift */,
 				27955EA91E94823200680389 /* MovieFilmsCell.xib */,
 				27955E6F1E93ECA500680389 /* Main.storyboard */,
@@ -483,6 +486,7 @@
 				27955EA31E942CA800680389 /* MovieRequest.swift in Sources */,
 				27955E9F1E941AB400680389 /* Movie.swift in Sources */,
 				27955EA11E94225F00680389 /* MovieService.swift in Sources */,
+				27894CE41E9538F3008A963A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
