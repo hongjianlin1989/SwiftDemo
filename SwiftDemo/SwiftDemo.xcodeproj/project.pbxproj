@@ -16,6 +16,11 @@
 		27955E761E93ECA500680389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27955E741E93ECA500680389 /* LaunchScreen.storyboard */; };
 		27955E811E93ECA500680389 /* SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E801E93ECA500680389 /* SwiftDemoTests.swift */; };
 		27955E8C1E93ECA500680389 /* SwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E8B1E93ECA500680389 /* SwiftDemoUITests.swift */; };
+		27955E9B1E93F81900680389 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E991E93F81900680389 /* MovieCell.swift */; };
+		27955E9C1E93F81900680389 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27955E9A1E93F81900680389 /* MovieCell.xib */; };
+		27955E9F1E941AB400680389 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E9E1E941AB400680389 /* Movie.swift */; };
+		27955EA11E94225F00680389 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955EA01E94225F00680389 /* MovieService.swift */; };
+		27955EA31E942CA800680389 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955EA21E942CA800680389 /* MovieRequest.swift */; };
 		A29520CCBFBECF77B072FA53 /* Pods_SwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C090AE92965618A4C02A38 /* Pods_SwiftDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,11 @@
 		27955E871E93ECA500680389 /* SwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27955E8B1E93ECA500680389 /* SwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoUITests.swift; sourceTree = "<group>"; };
 		27955E8D1E93ECA500680389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27955E991E93F81900680389 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		27955E9A1E93F81900680389 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		27955E9E1E941AB400680389 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		27955EA01E94225F00680389 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		27955EA21E942CA800680389 /* MovieRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
 		41843899BA84D3AAC231F0D2 /* Pods-SwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoTests/Pods-SwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		46E8D0435BB3AD9B8026BDE4 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9953E41D4D138632D1D691F9 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				27955E6B1E93ECA500680389 /* AppDelegate.swift */,
+				27955E9D1E941A9600680389 /* Networking */,
 				27955E6D1E93ECA500680389 /* ViewController.swift */,
+				27955E991E93F81900680389 /* MovieCell.swift */,
+				27955E9A1E93F81900680389 /* MovieCell.xib */,
 				27955E6F1E93ECA500680389 /* Main.storyboard */,
 				27955E721E93ECA500680389 /* Assets.xcassets */,
 				27955E741E93ECA500680389 /* LaunchScreen.storyboard */,
@@ -153,6 +166,16 @@
 				27955E8D1E93ECA500680389 /* Info.plist */,
 			);
 			path = SwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		27955E9D1E941A9600680389 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				27955E9E1E941AB400680389 /* Movie.swift */,
+				27955EA21E942CA800680389 /* MovieRequest.swift */,
+				27955EA01E94225F00680389 /* MovieService.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		832D703EA416ED3A56C642F5 /* Frameworks */ = {
@@ -286,6 +309,7 @@
 			files = (
 				27955E761E93ECA500680389 /* LaunchScreen.storyboard in Resources */,
 				27955E731E93ECA500680389 /* Assets.xcassets in Resources */,
+				27955E9C1E93F81900680389 /* MovieCell.xib in Resources */,
 				27955E711E93ECA500680389 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +475,10 @@
 			files = (
 				27955E6E1E93ECA500680389 /* ViewController.swift in Sources */,
 				27955E6C1E93ECA500680389 /* AppDelegate.swift in Sources */,
+				27955EA31E942CA800680389 /* MovieRequest.swift in Sources */,
+				27955E9F1E941AB400680389 /* Movie.swift in Sources */,
+				27955E9B1E93F81900680389 /* MovieCell.swift in Sources */,
+				27955EA11E94225F00680389 /* MovieService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +733,7 @@
 				27955E921E93ECA500680389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27955E931E93ECA500680389 /* Build configuration list for PBXNativeTarget "SwiftDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +742,7 @@
 				27955E951E93ECA500680389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27955E961E93ECA500680389 /* Build configuration list for PBXNativeTarget "SwiftDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +751,7 @@
 				27955E981E93ECA500680389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
