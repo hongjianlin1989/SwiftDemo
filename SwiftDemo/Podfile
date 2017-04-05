@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'SwiftDemo' do
     pod 'Alamofire', '~> 4.4'
+    pod 'AlamofireImage', '~> 3.1'
 end
 
 target 'SwiftDemoTests' do
