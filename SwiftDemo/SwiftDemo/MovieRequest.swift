@@ -41,12 +41,12 @@ class MovieRequest: NSObject {
     }
     
     
-    public var DetailUrl: NSString? {
-        var url = "authToken=" + authToken
+    public var DetailUrl: String? {
+        var url = "?authToken=" + authToken
         for case let item as String in self.movieIds! {
             url = url + "&movieIds=" + item
         }
-        return url as NSString?
+        return url
     }
     
     

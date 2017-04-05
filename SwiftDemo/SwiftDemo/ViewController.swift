@@ -19,10 +19,31 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MovieFilmsCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
-        self.fetchListOfMoive()
+        //self.fetchListOfMoive()
+        self.fetchRankListOfMoive()
     }
     
-    
+    func fetchRankListOfMoive() {
+        let movieRequest = MovieRequest.init(startRankIndex: 1, numMovies: 10)
+        self.movieService.getRankListOfMovieWithRequest(req: movieRequest) { (Array) in
+            self.movieArray = Array
+            self.fetchDetailListOfMoive()
+        }
+    }
+
+    func fetchDetailListOfMoive() {
+        var movieListId = [String]()
+        for case let item in self.movieArray {
+            movieListId.append((item.movieId?.stringValue)!)
+        }
+        
+        let movieRequest = MovieRequest.init(movieIds: movieListId as NSArray)
+        self.movieService.getDetailListOfMovieWithRequest(req: movieRequest) { (Array) in
+            self.movieArray = Array
+            self.tableView.reloadData()
+        }
+    }
+
     func fetchListOfMoive() {
         let movieRequest = MovieRequest.init()
         self.movieService.getListOfMovieWithRequest(req: movieRequest) { (Array) in

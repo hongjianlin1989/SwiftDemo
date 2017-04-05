@@ -39,5 +39,51 @@ class MovieService: NSObject {
 
     }
     
+    public func getRankListOfMovieWithRequest(req: MovieRequest, completion: @escaping (_ result: Array<Movie>) -> Void)
+    {
+        
+        let strURL = MovieServiceURLString + self.MoviesByRankEndpointString
+        
+        Alamofire.request(strURL , parameters: req.rankParameters as? Dictionary).responseJSON { response in
+            debugPrint(response)
+            
+            if let JSON = response.result.value as? NSArray{
+                
+                var movieArray : Array<Movie> = Array.init()
+                for case let item as NSDictionary in JSON {
+                    let m = Movie.init(objDictionary: item)
+                    movieArray.append(m)
+                }
+                completion(movieArray)
+            }
+            
+        }
+        
+    }
+    
+    
+    public func getDetailListOfMovieWithRequest(req: MovieRequest, completion: @escaping (_ result: Array<Movie>) -> Void)
+    {
+        
+        let strURL = MovieServiceURLString + self.MovieDetailsEndpointString + req.DetailUrl!
+        
+        Alamofire.request(strURL).responseJSON { response in
+            debugPrint(response)
+            
+            if let JSON = response.result.value as? NSArray{
+                var movieArray : Array<Movie> = Array.init()
+                for case let item as NSDictionary in JSON {
+                    let m = Movie.init(objDictionary: item)
+                    movieArray.append(m)
+                }
+                completion(movieArray)
+            }
+            
+        }
+        
+    }
+
+
+    
     
 }
